@@ -18,15 +18,15 @@ int main(void)
 	printf("%d and is ", last);
 	if (last == 0)
 	{
-		printf("0");
+		printf("0\n");
 	}
 	else if (last > 5)
 	{
-		printf("greater than 5");
+		printf("greater than 5\n");
 	}
 	else
 	{
-		printf("less than 6 and not 0");
+		printf("less than 6 and not 0\n");
 	}
 	return (0);
 }
