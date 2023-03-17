@@ -8,6 +8,7 @@
 int main(void)
 {
 	unsigned char c = 'a';
+
 	while (c < 'a' + 26)
 	{
 		putchar(c);
