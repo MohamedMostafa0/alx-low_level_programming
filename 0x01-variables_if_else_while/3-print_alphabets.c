@@ -15,7 +15,7 @@ int main(void)
 		c++;
 	}
 	c = 'A';
-	while (c < 'A' +26)
+	while (c < 'A' + 26)
 	{
 		putchar(c);
 		c++;
