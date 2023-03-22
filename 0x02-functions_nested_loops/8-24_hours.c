@@ -1,13 +1,29 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * _isalpha - check if char is alpha
- * @c: check char
- * Return: int
+ * jack_bauer - prints every minute of the day of Jack Bauer
+ * starting from 00:00 to 23:59
  */
-int _isalpha(int c)
+void jack_bauer(void)
 {
-	return ((c >= 97 && c <= (97 + 25)) || (c >= 65 || c < (65 + 25)) ? 1 : 0);
-}
+	int i, j;
 
+	i = 0;
+
+	while (i < 24)
+	{
+		j = 0;
+		while (j < 60)
+		{
+			_putchar((i / 10) + '0');
+			_putchar((i % 10) + '0');
+			_putchar(':');
+			_putchar((j / 10) + '0');
+			_putchar((j % 10) + '0');
+			_putchar('\n');
+			j++;
+		}
+		i++;
+	}
+}
 
