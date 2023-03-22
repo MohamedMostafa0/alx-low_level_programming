@@ -1,13 +1,17 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * _isalpha - check if char is alpha
- * @c: check char
- * Return: int
+ * add - adds two integers and returns the result
+ * @a: int to be added to b
+ * @b: int to be added to a
+ * Return: sum of a and b
  */
-int _isalpha(int c)
+int add(int a, int b)
 {
-	return ((c >= 97 && c <= (97 + 25)) || (c >= 65 || c < (65 + 25)) ? 1 : 0);
-}
+	int c;
 
+	c = a + b;
+
+	return (c);
+}
 
