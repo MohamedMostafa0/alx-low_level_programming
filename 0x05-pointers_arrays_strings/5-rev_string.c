@@ -18,6 +18,8 @@ void rev_string(char *s)
 		char temp = *(s + a);
 		*(s + a) = *(s + i);
 		*(s + i) = temp;
+		a++;
+		i--;
 	}
 }
 
