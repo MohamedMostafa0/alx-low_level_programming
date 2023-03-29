@@ -1,4 +1,5 @@
 #include "main.h"
+#include "string.h"
 /**
  * _strcat - func
  * @dest: a - Variable
@@ -7,13 +8,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-
-	while (dest[i] != '\0')
-		i++;
-
-	*(dest + i) = src;
-
+	strcpy(dest, s);
 	return (dest);
 }
 
