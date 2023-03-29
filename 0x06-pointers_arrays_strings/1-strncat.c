@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - func
+ * _strncat - func
  * @dest: a - Variable
  * @src: b - variable
  * @n: c - variable
