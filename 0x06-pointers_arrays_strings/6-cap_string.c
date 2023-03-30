@@ -1,43 +1,34 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * cap_string - func
- * @a: a - Variable
- * Return: return
+ * cap_string - capitalizes everey word of a string
+ * @s: string to modify
+ *
+ * Return: the resulting string
  */
-char *cap_string(char *a)
+char *cap_string(char *s)
 {
-	int i = 0, j;
-	short n = 0;
-	char *s = ",;.!?\"(){}\t\n ";
+	int i, j;
 
-	while (a[i] != '\0')
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (n == 1)
-		{
-			if (a[i] >= 97 && a[i] <= 97 + 25)
-			{
-				a[i] -= 97 - 65;
-				n = 0;
-				continue;
-			}
-			else
-			{
-				n = 0;
-				continue;
-			}
-		}
-		for (j = 0; s[j] != '\0'; j++)
-		{
-			if (s[j] == a)
-			{
-				n = 1;
-				continue;
-			}
-		}
-		i++;
-	}
-	return (a);
-}
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 
+		for (j = 0; j < 13; j++)
+		{
+			if (s[i] == spe[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
+			}
+		}
+	}
+
+	return (s);
+}
