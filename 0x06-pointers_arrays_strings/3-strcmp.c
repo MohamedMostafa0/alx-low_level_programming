@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
- * reverse_array - func
- * @a: a - Variable
- * @n: b variable
+ * _strcmp - func
+ * @s1: a - Variable
+ * @s2: b variable
  * Return: return
  */
-void reverse_array(int *a, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i = 0, j = n - 1;
+	char res;
+	int i;
 
-	while (i < j)
-	{
-		int temp = a[i];
+	for (i = 0; s1[i] != '\0'; i++)
+		res += s1[i];
 
-		a[i] = a[j];
-		a[j] = temp;
+	for (i = 0; s2[i] != '\0'; i++)
+		res -= s2[i];
 
-		i++;
-		j++;
-	}
+	return res;
 }
 
