@@ -8,41 +8,27 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	char a[265] = {0}
-	int i;
-	unsigned int res = 0;
+	int i, j, f, flag;
 
-	for (i = 0; accept[i] != '\0'; i++)
-	{
-		if (accept[i] >= 'a' && accept[i] <= 'z')
-		{
-			a[accept[i] - 'a'] += 1;
-		}
-		else if (accept[i] >= 'A' && accept[i] <= 'Z')
-		{
-			a[accept[i] - 'A' + 26] += 1;
-		}
-	}
+	f = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		int flag = -1;
-
-		if (s[i] >= 'a' && s[i] <= 'z')
+		flag = 0;
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			flag = s[i] - 'a';
+			if (s[i] == accept[j])
+			{
+				f++;
+				flag = 1;
+			}
 		}
-		else if (s[i] >= 'A' && s[i] <= 'Z')
+		if (flag == 0)
 		{
-			flag = s[i] - 'A' + 26;
+			return (f);
 		}
-		if (flag > -1 && a[flag] > 0)
-		{
-			res++;
-		}
-		else
-			break;
 	}
-	return (res);
+
+	return (0);
 }
 
