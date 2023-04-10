@@ -25,23 +25,23 @@ int main(int argc, char *argv[])
 	num = atoi(argv[1]);
 	if (num >= 25)
 	{
-		res += num % 25;
-		num -= 25 * (num % 25);
+		res += num / 25;
+		num %= 25;
 	}
 	if (num >= 10)
 	{
-		res += num % 10;
-		num -= 10 * (num % 10);
+		res += num / 10;
+		num %= 10;
 	}
 	if (num >= 5)
 	{
-		res += num % 5;
-		num -= 5 * (num % 5);
+		res += num / 5;
+		num %= 5;
 	}
 	if (num >= 2)
 	{
-		res += num % 2;
-		num -= 2 * (num % 2);
+		res += num / 2;
+		num %= 2;
 	}
 	if (num > 0)
 		res++;
