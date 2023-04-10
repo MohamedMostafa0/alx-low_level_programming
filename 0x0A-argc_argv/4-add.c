@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		{
 			if (str[j] < '0' || str[j] > '9')
 			{
-				printf("Error");
+				printf("Error\n");
 				return (1);
 			}
 			num = num * 10 + (str[j] - 48);
