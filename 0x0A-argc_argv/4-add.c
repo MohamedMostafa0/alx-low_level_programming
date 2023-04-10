@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, res = 0, num = 0;
+	int i, j, res = 0, num;
 	char *str;
 
 	if (argc == 1)
@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		str = argv[i];
+		num = 0;
 
 		if (str[0] != '\0' && str[0] == '-')
 			j = 1;
