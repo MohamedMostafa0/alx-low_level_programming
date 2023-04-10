@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
 			j = 1;
 		else
 			j = 0;
-		for (; str[i] != '\0'; i++)
+		for (; str[j] != '\0'; j++)
 		{
-			if (str[i] < '0' || str[i] > '9')
+			if (str[j] < '0' || str[j] > '9')
 			{
 				printf("Error");
 				return (1);
 			}
-			num = num * 10 + (str[i] - 48);
+			num = num * 10 + (str[j] - 48);
 		}
 		if (str[0] == '-')
 			num *= -1;
