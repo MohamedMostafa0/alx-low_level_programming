@@ -7,7 +7,7 @@
  * @argv: b array
  * Return: int
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	printf("%d\n", argc - 1);
 
