@@ -9,11 +9,10 @@
  *
  * Description: Longer description
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	int age;
 	char *owner;
-}
-
+} my_dog;
 #endif
